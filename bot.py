@@ -1,4 +1,4 @@
-from http import client
+
 import hikari
 import lightbulb
 import datetime
@@ -7,7 +7,7 @@ import json
 
 
 bot = lightbulb.BotApp(
-    token='',
+    token='token',
     prefix=".",
     default_enabled_guilds=(992671415419547649))
 
@@ -346,9 +346,16 @@ async def embed_command(ctx: lightbulb.context) -> None:
     embed.add_field("Permmisions", "We recomend that you check out what commands have permmisions are required on what commands with `/permmisions`.")
     embed.set_footer(f"Requested by {ctx.user}")
     await ctx.respond(embed)
-
-
-
+    
+@bot.command()
+@lightbulb.command("user-info", "gets info on a user.")
+@lightbulb.implements(lightbulb.SlashCommand)
+async def embed_command(ctx: lightbulb.Context)-> None:
+    target = ctx.user
+    embed = hikari.Embed(title="User information", description=f"Displaying information for {ctx.user.mention}", color= 0xC1C806)
+    embed.set_footer(f"Requested by {ctx.user}")
+    embed.set_thumbnail(ctx.user.avatar_url)
+    await ctx.respond(embed)
 
 
 
