@@ -11,6 +11,7 @@ hikari==2.0.0.dev109
 hikari-lightbulb==2.2.2
 idna==3.3
 multidict==6.0.2
+python-dotenv==0.20.0
 pytz==2022.1
 yarl==1.7.2
 zope.interface==5.4.0
