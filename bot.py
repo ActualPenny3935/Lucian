@@ -4,11 +4,12 @@ import lightbulb
 import datetime
 import os
 import json
+import dotenv
 
 
 
 bot = lightbulb.BotApp(
-    token='os.environ["TOKEN"]',
+    token=os.getenv("TOKEN"),
     prefix='.',
     default_enabled_guilds=(992671415419547649))
 
