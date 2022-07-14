@@ -8,7 +8,7 @@ import json
 
 
 bot = lightbulb.BotApp(
-    token='OTk0NTQ4NTIxMjcxMzE2NTMw.GFHKy2.4Q3QNw_c20B4p0ku4G4_2CExfOdDHBKlB4VajU',
+    token='',
     prefix='.',
     default_enabled_guilds=(992671415419547649))
 
